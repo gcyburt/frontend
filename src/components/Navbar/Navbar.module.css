@@ -1,0 +1,22 @@
+.navbar {
+    background-color: #f0f0f0; /* Example background color */
+    border-bottom: 1px solid #ccc; /* Example border */
+}
+
+.menuItem {
+    color: #333; /* Example text color */
+    font-weight: bold; /* Example font weight */
+}
+
+.menuItem a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+}
+
+.menuItem a:hover {
+    color: #007bff; /* Example hover color */
+}
+
+.logout {
+    margin-left: auto;
+} 

@@ -1,0 +1,13 @@
+{
+    "login": "Zaloguj się",
+    "register": "Zarejestruj się",
+    "alreadyHaveAccount": "Masz już konto? Zaloguj się",
+    "needAccount": "Potrzebujesz konta? Zarejestruj się",
+    "english": "Angielski",
+    "polish": "Polski",
+    "home": "Strona główna",
+    "about": "O nas",
+    "documentation": "Dokumentacja",
+    "chat": "Czat",
+    "logout": "Wyloguj się"
+}

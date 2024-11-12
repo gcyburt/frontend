@@ -1,0 +1,13 @@
+{
+    "login": "Login",
+    "register": "Register",
+    "alreadyHaveAccount": "Already have an account? Login",
+    "needAccount": "Need an account? Register",
+    "english": "English",
+    "polish": "Polish",
+    "home": "Home",
+    "about": "About",
+    "documentation": "Documentation",
+    "chat": "Chat",
+    "logout": "Logout"
+}
