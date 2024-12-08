@@ -12,14 +12,16 @@ const Chat: React.FC = () => {
     const handleSendMessage = async () => {
         if (!message.trim()) return;
 
+        console.log('✉️ Sending message:', message);
         setChatHistory([...chatHistory, `You: ${message}`]);
 
         try {
             const response = await axios.post(endpoint, { prompt: message });
+            console.log('🤖 Received AI response:', response.data.completion);
 
             setChatHistory([...chatHistory, `You: ${message}`, `AI: ${response.data.completion}`]);
         } catch (error) {
-            console.error('Error sending message:', error);
+            console.error('❌ Error sending message:', error);
         }
 
         setMessage('');

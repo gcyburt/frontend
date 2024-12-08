@@ -1,29 +1,26 @@
 .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-}
-
-.rightAligned {
-    margin-left: auto;
-    display: flex;
-    align-items: center;
+    background-color: #6a0dad; /* Example violet color */
+    color: #fff;
 }
 
 .menuItem {
-    color: #333; /* Example text color */
+    color: #fff !important; /* Ensure menu item text is white */
     font-weight: bold; /* Example font weight */
 }
 
 .menuItem a {
     text-decoration: none; /* Remove underline from links */
-    color: inherit; /* Inherit color from parent */
+    color: #fff; /* Ensure link text is white */
 }
 
 .menuItem a:hover {
-    color: #007bff; /* Example hover color */
+    color: #9e2dee; /* Example hover color */
 }
 
-.logout {
-    margin-left: auto;
+.rightAligned {
+    margin-left: auto; /* Push items to the right */
+    display: flex;
+    align-items: center;
 } 

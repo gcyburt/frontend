@@ -18,11 +18,13 @@ const DocumentUpload: React.FC = () => {
         onChange(info: any) {
             const { status } = info.file;
             if (status !== 'uploading') {
-                console.log(info.file, info.fileList);
+                console.log('📄 File upload in progress:', info.file.name);
             }
             if (status === 'done') {
+                console.log('✅ File uploaded successfully:', info.file.name);
                 message.success(`${t('uploadSuccess')}`);
             } else if (status === 'error') {
+                console.error('❌ Error uploading file:', info.file.name);
                 message.error(`${t('uploadError')}`);
             }
         },

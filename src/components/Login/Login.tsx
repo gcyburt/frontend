@@ -25,6 +25,8 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
             ? { username, password, email, name, surname, accessRole: 'office' } 
             : { username, password };
 
+        console.log(isRegistering ? '📝 Registering user:' : '🔑 Logging in user:', username);
+
         const response = await fetch(endpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -32,18 +34,25 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
         });
 
         if (response.ok) {
+            console.log('✅ Login/Register successful for user:', username);
             onLogin(username);
-            // Redirect to the dashboard on successful login
             navigate('/dashboard');
         } else {
-            // Handle errors
-            console.error('Error:', await response.json());
+            const error = await response.json();
+            console.error('❌ Error during login/register:', error);
+            alert(t('error'));
+        }
+    };
+
+    const handleKeyDown = (event: React.KeyboardEvent) => {
+        if (event.key === 'Enter') {
+            handleSubmit(event as unknown as React.FormEvent);
         }
     };
 
     return (
         <div className="login-container">
-            <form onSubmit={handleSubmit} className="login-form">
+            <form onSubmit={handleSubmit} className="login-form" onKeyDown={handleKeyDown}>
                 <h2>{isRegistering ? t('register') : t('login')}</h2>
                 {isRegistering && (
                     <>

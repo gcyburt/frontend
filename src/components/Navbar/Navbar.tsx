@@ -5,47 +5,69 @@ import { useTranslation } from 'react-i18next';
 
 const Navbar = ({ username, onLogout, changeLanguage }: { username: string | null, onLogout: () => void, changeLanguage: (lng: string) => void }) => {
     const { t } = useTranslation();
+
+    const menuItems = [
+        {
+            key: 'home',
+            icon: <HomeOutlined />,
+            label: <a href="/dashboard">{t('home')}</a>,
+            className: styles.menuItem,
+        },
+        {
+            key: 'documentation',
+            icon: <PaperClipOutlined />,
+            label: <a href="/documentation">{t('documentation')}</a>,
+            className: styles.menuItem,
+        },
+        {
+            key: 'chat',
+            icon: <MessageOutlined />,
+            label: <a href="/chat">{t('chat')}</a>,
+            className: styles.menuItem,
+        },
+        {
+            key: 'about',
+            icon: <InfoCircleOutlined />,
+            label: <a href="/about">{t('about')}</a>,
+            className: styles.menuItem,
+        },
+        ...(username ? [{
+            key: 'username',
+            icon: <UserOutlined />,
+            label: (
+                <>
+                    {username}
+                    <a href="/profile">{t('profile')}</a>
+                </>
+            ),
+            className: styles.menuItem,
+        }] : []),
+        {
+            key: 'logout',
+            icon: <LogoutOutlined />,
+            label: t('logout'),
+            className: `${styles.menuItem} ${styles.logout}`,
+            onClick: onLogout,
+        },
+        {
+            key: 'language',
+            label: (
+                <Select
+                    defaultValue="en"
+                    style={{ width: 120 }}
+                    onChange={changeLanguage}
+                    className={styles.languageSelect}
+                >
+                    <Select.Option value="en">{t('english')}</Select.Option>
+                    <Select.Option value="pl">{t('polish')}</Select.Option>
+                </Select>
+            ),
+            className: styles.menuItem,
+        },
+    ];
+
     return (
-        <Menu mode="horizontal" className={styles.navbar}>
-            <div className={styles.leftAligned}>
-                <Menu.Item key="home" icon={<HomeOutlined />} className={styles.menuItem}>
-                    <a href="/dashboard">{t('home')}</a>
-                </Menu.Item>
-                <Menu.Item key="documentation" icon={<PaperClipOutlined />} className={styles.menuItem}>
-                    <a href="/documentation">{t('documentation')}</a>
-                </Menu.Item>
-                <Menu.Item key="chat" icon={<MessageOutlined />} className={styles.menuItem}>
-                    <a href="/chat">{t('chat')}</a>
-                </Menu.Item>
-                <Menu.Item key="about" icon={<InfoCircleOutlined />} className={styles.menuItem}>
-                    <a href="/about">{t('about')}</a>
-                </Menu.Item>
-
-
-            </div>
-            <div className={styles.rightAligned}>
-                {username && (
-                    <Menu.Item key="username" icon={<UserOutlined />} className={styles.menuItem}>
-                        {username}
-                        <a href="/profile">{t('profile')}</a>
-                    </Menu.Item>
-                )}
-                <Menu.Item key="logout" icon={<LogoutOutlined />} className={`${styles.menuItem} ${styles.logout}`} onClick={onLogout}>
-                    {t('logout')}
-                </Menu.Item>
-                <Menu.Item key="language" className={styles.menuItem}>
-                    <Select
-                        defaultValue="en"
-                        style={{ width: 120 }}
-                        onChange={changeLanguage}
-                        className={styles.languageSelect}
-                    >
-                        <Select.Option value="en">{t('english')}</Select.Option>
-                        <Select.Option value="pl">{t('polish')}</Select.Option>
-                    </Select>
-                </Menu.Item>
-            </div>
-        </Menu>
+        <Menu mode="horizontal" className={styles.navbar} items={menuItems} />
     );
 };
 

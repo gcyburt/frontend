@@ -7,6 +7,8 @@ import Dashboard from './components/Dashboard/Dashboard';
 import Navbar from './components/Navbar/Navbar';
 import DocumentUpload from './components/DocumentUpload/DocumentUpload';
 import Chat from './components/Chat/Chat';
+import Profile from './components/Profile/Profile';
+
 import './App.css';
 import './i18n';
 
@@ -40,6 +42,7 @@ const App: React.FC = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/documentation" element={<DocumentUpload />} />
         <Route path="/chat" element={<Chat />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
   );
