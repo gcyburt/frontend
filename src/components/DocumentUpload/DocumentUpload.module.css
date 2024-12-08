@@ -1,0 +1,9 @@
+.uploadContainer {
+    max-width: 600px; /* Adjust the width as needed */
+    margin: 40px auto; /* Add top margin for spacing and center the container */
+    padding: 20px; /* Add some padding */
+    border: 1px solid #d9d9d9; /* Optional: Add a border */
+    border-radius: 12px; /* Increase the border-radius for more rounded corners */
+    background-color: #f9f9f9; /* Optional: Add a background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}

@@ -9,5 +9,10 @@
     "about": "O nas",
     "documentation": "Dokumentacja",
     "chat": "Czat",
-    "logout": "Wyloguj się"
+    "logout": "Wyloguj się",
+    "profile": "Profil",
+    "uploadDocument": "Prześlij dokument",
+    "uploadHint": "Obsługa pojedynczego lub masowego przesyłania. Nie dozwolone jest przesyłanie danych firmowych lub innych plików.",
+    "uploadSuccess": "Plik przesłany pomyślnie.",
+    "uploadError": "Przesyłanie pliku nie powiodło się."
 }

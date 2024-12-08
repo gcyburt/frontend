@@ -1,11 +1,11 @@
 .chat-container {
     display: flex;
     flex-direction: column;
-    width: 400px;
-    margin: 0 auto;
+    width: 250px;
+    margin: 20px auto;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     background-color: #f9f9f9;
 }
@@ -14,14 +14,14 @@
     flex-grow: 1;
     padding: 10px;
     overflow-y: auto;
-    max-height: 300px;
+    max-height: 250px;
     border-bottom: 1px solid #ddd;
 }
 
 .chat-history div {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding: 8px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #e0e0e0;
 }
 
@@ -31,10 +31,10 @@
 
 input[type="text"] {
     width: calc(100% - 20px);
-    padding: 10px;
+    padding: 8px;
     margin: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 8px;
     outline: none;
     transition: border-color 0.3s;
 }
@@ -45,12 +45,12 @@ input[type="text"]:focus {
 
 button {
     width: calc(100% - 20px);
-    padding: 10px;
+    padding: 8px;
     margin: 10px;
     background-color: #007bff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s;
 }

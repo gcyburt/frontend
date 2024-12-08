@@ -9,5 +9,10 @@
     "about": "About",
     "documentation": "Documentation",
     "chat": "Chat",
-    "logout": "Logout"
+    "logout": "Logout",
+    "profile": "Profile",
+    "uploadDocument": "Upload Document",
+    "uploadHint": "Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files.",
+    "uploadSuccess": "File uploaded successfully.",
+    "uploadError": "File upload failed."
 }

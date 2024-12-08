@@ -20,7 +20,7 @@ const Login: React.FC<LoginProps> = ({ onLogin }) => {
     const handleSubmit = async (event: React.FormEvent) => {
         event.preventDefault();
         const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:3000';
-        const endpoint = isRegistering ? `${apiUrl}/register` : `${apiUrl}/login`;
+        const endpoint = isRegistering ? `${apiUrl}/user/register` : `${apiUrl}/user/login`;
         const body = isRegistering 
             ? { username, password, email, name, surname, accessRole: 'office' } 
             : { username, password };

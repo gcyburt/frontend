@@ -1,6 +1,13 @@
 .navbar {
-    background-color: #f0f0f0; /* Example background color */
-    border-bottom: 1px solid #ccc; /* Example border */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightAligned {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .menuItem {
